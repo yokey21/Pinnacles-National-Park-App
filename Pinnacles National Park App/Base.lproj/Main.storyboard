@@ -1,24 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kLD-dp-TyK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Home-->
+        <scene sceneID="VxJ-lD-yDH">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="KbN-ix-yoE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQU-4j-OFk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="PwA-zC-z3I">
+                                <rect key="frame" x="20" y="59" width="374" height="714"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7jf-pF-YyW">
+                                        <rect key="frame" x="2.5" y="0.0" width="369" height="136"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPS-Transparent-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="uyd-0B-zth">
+                                                <rect key="frame" x="0.0" y="22.5" width="90" height="91"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="91" id="U5x-12-L2M"/>
+                                                    <constraint firstAttribute="width" constant="90" id="Xvr-sJ-kTP"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinnacles National Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raw-My-zxv">
+                                                <rect key="frame" x="98" y="52" width="271" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nDh-eW-pB7">
+                                        <rect key="frame" x="10.5" y="168" width="353" height="148"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-1" translatesAutoresizingMaskIntoConstraints="NO" id="3dJ-ev-jHZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="169" height="148"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="148" id="QIl-U5-550"/>
+                                                    <constraint firstAttribute="width" constant="169" id="dDg-Bc-Zsb"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some 23 million years ago multiple volcanoes erupted, flowed, and slid to form what would become Pinnacles National Park." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5v-Jb-j2h">
+                                                <rect key="frame" x="184" y="0.0" width="169" height="148"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="148" id="Rgw-xF-34v"/>
+                                                    <constraint firstAttribute="width" constant="169" id="piD-Dv-XDZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="APR-Jy-vK5">
+                                        <rect key="frame" x="10.5" y="348" width="353" height="148"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What remains is a unique landscape. Travelers journey through chaparral, oak woodlands, and canyon bottoms." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMj-QC-MIH">
+                                                <rect key="frame" x="0.0" y="0.0" width="169" height="148"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="148" id="0Na-3r-grH"/>
+                                                    <constraint firstAttribute="width" constant="169" id="Y7E-jM-OGQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-2" translatesAutoresizingMaskIntoConstraints="NO" id="IPV-JT-yPI">
+                                                <rect key="frame" x="184" y="0.0" width="169" height="148"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="169" id="HsU-h9-x0Q"/>
+                                                    <constraint firstAttribute="height" constant="148" id="LlC-J9-MTT"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vLo-Yn-Sgd">
+                                        <rect key="frame" x="10.5" y="528" width="353" height="186"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-3" translatesAutoresizingMaskIntoConstraints="NO" id="mip-ct-8Du">
+                                                <rect key="frame" x="0.0" y="0.0" width="169" height="186"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="169" id="seg-8B-7JJ"/>
+                                                    <constraint firstAttribute="height" constant="186" id="vhH-Kv-UhM"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9H-xp-xbS">
+                                                <rect key="frame" x="184" y="0.0" width="169" height="186"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="207" id="XVh-aG-ggy"/>
+                                                    <constraint firstAttribute="width" constant="169" id="u3M-Xu-SNq"/>
+                                                </constraints>
+                                                <string key="text">Hikers enter rare talus caves and emerge to towering rock spires teeming with life: prairie and peregrine falcons, golden eagles, and the inspiring California condor.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NaL-tg-7on"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PwA-zC-z3I" firstAttribute="top" secondItem="NaL-tg-7on" secondAttribute="top" constant="15" id="9Q2-hN-90R"/>
+                            <constraint firstItem="NaL-tg-7on" firstAttribute="bottom" secondItem="PwA-zC-z3I" secondAttribute="bottom" constant="40" id="dy6-ah-Ox2"/>
+                            <constraint firstItem="NaL-tg-7on" firstAttribute="trailing" secondItem="PwA-zC-z3I" secondAttribute="trailing" constant="20" id="pxF-JC-wcd"/>
+                            <constraint firstItem="PwA-zC-z3I" firstAttribute="leading" secondItem="NaL-tg-7on" secondAttribute="leading" constant="20" id="v4K-ub-DGQ"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="new_home_dark" id="bap-lH-DTq"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="US0-ia-YUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="896" y="173"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="0vF-Dr-lcv">
+            <objects>
+                <viewController id="pFe-4P-RMg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qbb-Jj-fEY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Dhd-Eb-DOo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="n6v-m8-c8z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOj-1F-S0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="192"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="K28-Gw-mFt">
+            <objects>
+                <viewController id="i3Q-cm-63d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CFj-GY-aRN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RQH-fI-dUV">
+                                <rect key="frame" x="20" y="49" width="374" height="749"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yD5-yH-IY9">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="182"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-3" translatesAutoresizingMaskIntoConstraints="NO" id="PoW-uF-d0g">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="182" id="4S7-nJ-lAt"/>
+                                                    <constraint firstAttribute="height" constant="182" id="DyO-05-SWU"/>
+                                                    <constraint firstAttribute="width" constant="182" id="IQc-KZ-xM4"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="182" id="z6b-DJ-qG5"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-1" translatesAutoresizingMaskIntoConstraints="NO" id="1bx-b1-Ivh">
+                                                <rect key="frame" x="192" y="0.0" width="182" height="182"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="182" id="5i9-qg-lAj"/>
+                                                    <constraint firstAttribute="width" constant="182" id="kPF-TD-J8Q"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="23n-wy-et2">
+                                        <rect key="frame" x="0.0" y="190" width="374" height="182"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-2" translatesAutoresizingMaskIntoConstraints="NO" id="CvT-zA-jeg">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="182"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="182" id="Bmd-gI-tj1"/>
+                                                    <constraint firstAttribute="width" constant="182" id="Iti-Tt-HzO"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="40E-lo-KQA">
+                                        <rect key="frame" x="0.0" y="380" width="374" height="182"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-4" translatesAutoresizingMaskIntoConstraints="NO" id="3s6-Sv-bZ0">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="182"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="182" id="7bo-gY-bdg"/>
+                                                    <constraint firstAttribute="width" constant="182" id="XuN-uz-kcz"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GPn-iS-SSr">
+                                        <rect key="frame" x="0.0" y="570" width="374" height="179"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aFJ-cH-TXA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RQH-fI-dUV" firstAttribute="top" secondItem="aFJ-cH-TXA" secondAttribute="top" constant="5" id="Dus-sb-DLC"/>
+                            <constraint firstItem="aFJ-cH-TXA" firstAttribute="bottom" secondItem="RQH-fI-dUV" secondAttribute="bottom" constant="15" id="IMO-oT-T9f"/>
+                            <constraint firstItem="aFJ-cH-TXA" firstAttribute="trailing" secondItem="RQH-fI-dUV" secondAttribute="trailing" constant="20" id="WYX-og-fOe"/>
+                            <constraint firstItem="RQH-fI-dUV" firstAttribute="leading" secondItem="aFJ-cH-TXA" secondAttribute="leading" constant="20" id="bdL-Vo-9JG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Photos" image="photo" catalog="system" id="m4E-bB-MAS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AM0-hb-e1G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.7101449275362" y="920.75892857142856"/>
+        </scene>
+        <!--Website-->
+        <scene sceneID="195-qn-rwV">
+            <objects>
+                <viewController id="v3V-0y-BI0" customClass="WebViewController" customModule="Pinnacles_National_Park_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JlC-59-Dc1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WOs-OJ-CY4">
+                                <rect key="frame" x="0.0" y="0.0" width="416" height="814"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P3F-bO-OfQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="416" height="814"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gYF-cn-nTp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Website" image="safari" catalog="system" id="pLO-Z3-Mog"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cfo-TP-Ttd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572" y="-490"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RBr-N6-iYb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kLD-dp-TyK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m0V-9B-Nh1">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KbN-ix-yoE" kind="relationship" relationship="viewControllers" id="eT9-MZ-DVh"/>
+                        <segue destination="v3V-0y-BI0" kind="relationship" relationship="viewControllers" id="uX0-fg-agr"/>
+                        <segue destination="i3Q-cm-63d" kind="relationship" relationship="viewControllers" id="q8u-Q3-UQe"/>
+                        <segue destination="pFe-4P-RMg" kind="relationship" relationship="viewControllers" id="tKi-FO-8cn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2i-u1-LD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NPS-Transparent-Logo" width="200" height="260"/>
+        <image name="Pinnacles-1" width="1024" height="683"/>
+        <image name="Pinnacles-2" width="1024" height="668"/>
+        <image name="Pinnacles-3" width="1500" height="1000"/>
+        <image name="Pinnacles-4" width="1170" height="832"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="new_home_dark" width="28" height="28"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="safari" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

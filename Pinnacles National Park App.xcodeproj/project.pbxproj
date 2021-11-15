@@ -16,6 +16,7 @@
 		326A1F872741DC29006B6DE7 /* Pinnacles_National_Park_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A1F862741DC29006B6DE7 /* Pinnacles_National_Park_AppTests.swift */; };
 		326A1F912741DC2A006B6DE7 /* Pinnacles_National_Park_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A1F902741DC2A006B6DE7 /* Pinnacles_National_Park_AppUITests.swift */; };
 		326A1F932741DC2A006B6DE7 /* Pinnacles_National_Park_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A1F922741DC2A006B6DE7 /* Pinnacles_National_Park_AppUITestsLaunchTests.swift */; };
+		326A1FA22742295E006B6DE7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A1FA12742295E006B6DE7 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		326A1F8C2741DC29006B6DE7 /* Pinnacles National Park AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pinnacles National Park AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		326A1F902741DC2A006B6DE7 /* Pinnacles_National_Park_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pinnacles_National_Park_AppUITests.swift; sourceTree = "<group>"; };
 		326A1F922741DC2A006B6DE7 /* Pinnacles_National_Park_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pinnacles_National_Park_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		326A1FA12742295E006B6DE7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				326A1F712741DC24006B6DE7 /* SceneDelegate.swift */,
 				326A1F732741DC24006B6DE7 /* ViewController.swift */,
 				326A1F752741DC24006B6DE7 /* Main.storyboard */,
+				326A1FA12742295E006B6DE7 /* WebViewController.swift */,
 				326A1F782741DC29006B6DE7 /* Assets.xcassets */,
 				326A1F7A2741DC29006B6DE7 /* LaunchScreen.storyboard */,
 				326A1F7D2741DC29006B6DE7 /* Info.plist */,
@@ -261,6 +264,7 @@
 				326A1F742741DC24006B6DE7 /* ViewController.swift in Sources */,
 				326A1F702741DC24006B6DE7 /* AppDelegate.swift in Sources */,
 				326A1F722741DC24006B6DE7 /* SceneDelegate.swift in Sources */,
+				326A1FA22742295E006B6DE7 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
