@@ -20,7 +20,7 @@
                                 <rect key="frame" x="20" y="59" width="374" height="714"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7jf-pF-YyW">
-                                        <rect key="frame" x="2.5" y="0.0" width="369" height="136"/>
+                                        <rect key="frame" x="1.5" y="0.0" width="371" height="136"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NPS-Transparent-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="uyd-0B-zth">
                                                 <rect key="frame" x="0.0" y="22.5" width="90" height="91"/>
@@ -29,9 +29,9 @@
                                                     <constraint firstAttribute="width" constant="90" id="Xvr-sJ-kTP"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinnacles National Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raw-My-zxv">
-                                                <rect key="frame" x="98" y="52" width="271" height="32.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinnacles National Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raw-My-zxv">
+                                                <rect key="frame" x="98" y="53" width="273" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -125,18 +125,55 @@
         <!--Map-->
         <scene sceneID="0vF-Dr-lcv">
             <objects>
-                <viewController id="pFe-4P-RMg" sceneMemberID="viewController">
+                <viewController id="pFe-4P-RMg" customClass="MapViewController" customModule="Pinnacles_National_Park_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qbb-Jj-fEY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VmC-Fn-Twv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="744"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VDe-Dj-AJg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="705"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="705" id="1G8-vQ-Y1d"/>
+                                            <constraint firstAttribute="width" constant="414" id="du2-84-x6n"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="delegate" destination="pFe-4P-RMg" id="QG4-K1-Bxq"/>
+                                        </connections>
+                                    </mapView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dmL-fb-0v1">
+                                        <rect key="frame" x="107" y="713" width="200" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="2Za-T5-NK2" userLabel="width = 300"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Map"/>
+                                            <segment title="Satellite"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="changeMapType:" destination="pFe-4P-RMg" eventType="valueChanged" id="yKA-F8-4he"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Dhd-Eb-DOo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VmC-Fn-Twv" firstAttribute="leading" secondItem="qbb-Jj-fEY" secondAttribute="leading" id="M1f-ej-Fmk"/>
+                            <constraint firstItem="Dhd-Eb-DOo" firstAttribute="trailing" secondItem="VmC-Fn-Twv" secondAttribute="trailing" id="bVm-3E-hn0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="n6v-m8-c8z"/>
+                    <connections>
+                        <outlet property="mapView" destination="VDe-Dj-AJg" id="FsO-tX-fa7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOj-1F-S0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="192"/>
+            <point key="canvasLocation" x="1747.826086956522" y="191.51785714285714"/>
         </scene>
         <!--Photos-->
         <scene sceneID="K28-Gw-mFt">
@@ -147,10 +184,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RQH-fI-dUV">
-                                <rect key="frame" x="20" y="49" width="374" height="749"/>
+                                <rect key="frame" x="10" y="49" width="394" height="749"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yD5-yH-IY9">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="182"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="182"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-3" translatesAutoresizingMaskIntoConstraints="NO" id="PoW-uF-d0g">
                                                 <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
@@ -162,7 +199,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-1" translatesAutoresizingMaskIntoConstraints="NO" id="1bx-b1-Ivh">
-                                                <rect key="frame" x="192" y="0.0" width="182" height="182"/>
+                                                <rect key="frame" x="192" y="0.0" width="202" height="182"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="182" id="5i9-qg-lAj"/>
                                                     <constraint firstAttribute="width" constant="182" id="kPF-TD-J8Q"/>
@@ -171,10 +208,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="23n-wy-et2">
-                                        <rect key="frame" x="0.0" y="190" width="374" height="182"/>
+                                        <rect key="frame" x="0.0" y="190" width="394" height="182"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-2" translatesAutoresizingMaskIntoConstraints="NO" id="CvT-zA-jeg">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="182"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="182"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="182" id="Bmd-gI-tj1"/>
                                                     <constraint firstAttribute="width" constant="182" id="Iti-Tt-HzO"/>
@@ -183,10 +220,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="40E-lo-KQA">
-                                        <rect key="frame" x="0.0" y="380" width="374" height="182"/>
+                                        <rect key="frame" x="0.0" y="380" width="394" height="182"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinnacles-4" translatesAutoresizingMaskIntoConstraints="NO" id="3s6-Sv-bZ0">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="182"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="182"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="182" id="7bo-gY-bdg"/>
                                                     <constraint firstAttribute="width" constant="182" id="XuN-uz-kcz"/>
@@ -195,7 +232,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GPn-iS-SSr">
-                                        <rect key="frame" x="0.0" y="570" width="374" height="179"/>
+                                        <rect key="frame" x="0.0" y="570" width="394" height="179"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -205,8 +242,8 @@
                         <constraints>
                             <constraint firstItem="RQH-fI-dUV" firstAttribute="top" secondItem="aFJ-cH-TXA" secondAttribute="top" constant="5" id="Dus-sb-DLC"/>
                             <constraint firstItem="aFJ-cH-TXA" firstAttribute="bottom" secondItem="RQH-fI-dUV" secondAttribute="bottom" constant="15" id="IMO-oT-T9f"/>
-                            <constraint firstItem="aFJ-cH-TXA" firstAttribute="trailing" secondItem="RQH-fI-dUV" secondAttribute="trailing" constant="20" id="WYX-og-fOe"/>
-                            <constraint firstItem="RQH-fI-dUV" firstAttribute="leading" secondItem="aFJ-cH-TXA" secondAttribute="leading" constant="20" id="bdL-Vo-9JG"/>
+                            <constraint firstItem="aFJ-cH-TXA" firstAttribute="trailing" secondItem="RQH-fI-dUV" secondAttribute="trailing" constant="10" id="WYX-og-fOe"/>
+                            <constraint firstItem="RQH-fI-dUV" firstAttribute="leading" secondItem="aFJ-cH-TXA" secondAttribute="leading" constant="10" id="bdL-Vo-9JG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photos" image="photo" catalog="system" id="m4E-bB-MAS"/>
@@ -223,7 +260,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WOs-OJ-CY4">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WOs-OJ-CY4">
                                 <rect key="frame" x="0.0" y="0.0" width="416" height="814"/>
                                 <subviews>
                                     <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P3F-bO-OfQ">
@@ -235,6 +272,9 @@
                                         </wkWebViewConfiguration>
                                     </wkWebView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="P3F-bO-OfQ" firstAttribute="top" secondItem="WOs-OJ-CY4" secondAttribute="top" constant="44" id="q87-mT-my7"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gYF-cn-nTp"/>
@@ -253,6 +293,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kLD-dp-TyK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m0V-9B-Nh1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
